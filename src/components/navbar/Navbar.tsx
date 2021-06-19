@@ -31,8 +31,11 @@ const Navbar: React.FC<Props> = (props) => {
           <ul className="navbar-nav">
             { user && user.role === 'Employee' ? (
               <>
-                 <li className="nav-item">
+                <li className="nav-item">
                   <NavLink className="nav-link" to="/reimbursements">My Reimbursements</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/add-reimbursement">Create a New Reimbursement</NavLink>
                 </li>
               </>
               ) : (

@@ -4,6 +4,7 @@ export default interface User {
     address?: string;
     phoneNumber?: string;
     role: Role;
+    amount: number;
     id: string;
 }
 
