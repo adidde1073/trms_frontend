@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import User from "../models/user";
-import { sendLogin } from "../remote/grubdash-backend/grubdash.api";
+import { sendLogin } from "../remote/trms-backend/trms.api";
 import { RootState } from "../store";
 
 export type UserState = User | null;
