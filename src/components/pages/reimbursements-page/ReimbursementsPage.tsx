@@ -1,41 +1,31 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import trmsClient from '../../../remote/trms-backend/trms.client'
+import React, { useEffect, useState } from 'react';
+import Reimbursement from '../../../models/reimbursement'
+import { getReimbursements } from '../../../remote/trms-backend/trms.api';
+import ReimbursementsComponent from './ReimbursementsComponent';
 
-const ReimbursementsPage: React.FC<unknown> = (props) => {
 
-  const [reimbursement, setReimbursement] = useState({res:[]});
+const ReimbursementsPage: React.FC<unknown> = (Props) => {
+    const [selected, setSelected] = useState<string>();
+    const [requests, setRequests] = useState<Reimbursement[]>();
+    // const employee = useAppSelector<EmployeeState>(selectEmployee);
+    useEffect(() => {
+        (async () => { 
+          const result = await getReimbursements();
+          // add error handling
+          const array: Reimbursement[] = []
+          setRequests(result); 
+          console.log(result);
+          console.log('Requests, ', requests);
+        })();
+    },[requests]);
+    return (
+      <>
+        {requests 
+        ? <ReimbursementsComponent requests={requests} setSelected={setSelected}/>
+        :<></>
+        }
+      </>
+    )
+  };
 
-  function rendReimbursements() {
-    try {
-      const listItems = (<ul> { JSON.stringify(reimbursement.res, null, 3) } </ul>);
-      ReactDOM.render(
-          listItems, document.getElementById('reimbursements'));
-    } catch(error) {
-      console.log('Could not list reimbursements');
-    }
-  }
-
-  const handleGetReimbursement = async () => {
-    const response = await trmsClient.get('/api/v1/reimbursements');
-    console.log("the db response is: ", response.data);
-    setReimbursement({res:response.data.res});
-    console.log('writing,', reimbursement)
-    rendReimbursements();
-  }
-
-  return (
-    <>
-    <div className="myForms">
-        <h3>Reimbursements</h3>
-        <br/>
-        <button onClick ={ handleGetReimbursement } className="btn btn-primary">View</button>
-        <br/><br/>
-        <pre id='reimbursements'>
-        </pre>
-    </div>
-    </>
-  );
-};
-
-export default ReimbursementsPage;
+  export default ReimbursementsPage;
