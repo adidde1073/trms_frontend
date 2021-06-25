@@ -5,10 +5,12 @@ export default interface Reimbursement {
     description: string;
     cost: number;
     amount: number;
-    category: Category;
+    reimbursementCategory: Category;
     rStat: rStat;
+    grade: string;
+    message: string;
     id: string;
 }
 
 export type Category = 'University Course' | 'Seminar' | 'Certification Preparation Class' | 'Certification' | 'Technical Training' | 'Other';
-export type rStat = 'initiated' | 'approved by DirSupervisor' | 'approved by DepHead' | 'approved by BenCo';
+export type rStat = 'initiated' | 'approved by DirSupervisor' | 'approved by DepHead' | 'approved!' | 'rejected';

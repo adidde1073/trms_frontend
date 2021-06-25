@@ -1,0 +1,10 @@
+.listItem {
+    border-style: solid;
+    padding: 20px;
+    margin: 10px;
+    font-weight: 400;
+}
+
+.butt {
+    margin-right: 10px;
+}
