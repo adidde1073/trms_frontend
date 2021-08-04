@@ -27,9 +27,9 @@ TRMS, or Tuition Reimbursement Management System is a full-stack web application
 
 List of features ready and TODOs for future development
 * Employees can submit for tuition reimbursements
+* Employees can cancel requests for reimbursement
 * Supervisors, Department Heads, and Benco can approve / reject requests
-* Send requests back to employees for more information
-* Reimbursement limits automatically reset every January 1st
+* Supervisors, Department Heads, and Benco can give feedback on requests
 
 ## Getting Started
    
