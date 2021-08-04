@@ -14,6 +14,8 @@ TRMS, or Tuition Reimbursement Management System is a full-stack web application
 
 * TypeScript
 * [React](https://reactjs.org/)
+* Redux
+* Axios
 
 ### Backend
 
