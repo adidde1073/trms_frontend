@@ -10,18 +10,11 @@
 <li>Redux</li>
 <li>Express</li>
 <li>DynamoDB</li>
-<li>AWS S3</li>
 <li>Bootstrap</li>
 <li>Node js</li>
 </ul>
 
 <h6>Overview:</h6>
 <p>
-TRMS provides a system that encourages quality knowledge growth relevant to an individual’s expertise
-as a reimbursement application for university courses, seminars, certification preparation classes,
-certifications, and technical training. The current system relies solely on email communication,
-requiring manual lookups of available funds, and is error-prone due to inbox clutter and incorrect
-routing of tasks. Furthermore, there is no way to record and report on reimbursements awarded, and
-so the company has no way to identify highly-invested courses that could be developed to be offered in-house.
-TRMS is the solution.
+TRMS, or Tuition Reimbursement Management System is a full-stack web application that allows employees to submit requests for reimbursements for courses, events, and certifications. These requests can then be approved or rejected by the employee's direct supervisor, department head, and a benefits coordinator while the employee is able to track the status of their requests.
 </p>
