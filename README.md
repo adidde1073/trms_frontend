@@ -23,13 +23,13 @@ TRMS, or Tuition Reimbursement Management System is a full-stack web application
 * [Express](https://expressjs.com/)
 * [DynamoDB](https://aws.amazon.com/dynamodb/)
 
-To-do list:
-* Expand test coverage
-* Send email notifications to users if request approvals are not timely
-* Auto-approve requests after set time 
-* Upload / display files for review
-* Fix user interface bugs
-* Polish styling
+## Features
+
+List of features ready and TODOs for future development
+* Employees can submit for tuition reimbursements
+* Supervisors, Department Heads, and Benco can approve / reject requests
+* Send requests back to employees for more information
+* Reimbursement limits automatically reset every January 1st
 
 ## Getting Started
    
